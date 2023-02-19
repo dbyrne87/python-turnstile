@@ -1,3 +1,16 @@
+##Use the following sitekeys and secret keys for testing purposes:
+
+##Sitekey	Description
+##1x00000000000000000000AA	Always passes
+##2x00000000000000000000AB	Always blocks
+##3x00000000000000000000FF	Forces an interactive challenge
+##Secret key	Description
+##1x0000000000000000000000000000000AA	Always passes
+##2x0000000000000000000000000000000AA	Always fails
+##3x0000000000000000000000000000000AA	Yields a “token already spent” error
+
+
+
 import requests
 
 def cloudflarecheck(request, bot): ##(bot is the cf-turnstile-response passed from the frontend)
